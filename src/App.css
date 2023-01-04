@@ -1,38 +1,100 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.arkaplan {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: -10;
+  left: 0;
+  top: 0;
+}
+
+.arkaplan .arkaplan-resim {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  z-index: -5;
+  right: 0;
+  bottom: 0;
+}
+
+.arkaplan .overlay {
+  position: absolute;
+  z-index: -3;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+
+#baslik {
+  margin-top: 40px;
+  text-align: center;
+  color: #cfc697;
+  font-size: 3rem;
+}
+
+.arama {
+  display: flex;
+  justify-content: center;
+  margin-top: 2.5rem;
+}
+
+.arama-input {
+  width: 80%;
+  height: 2rem;
+  text-align: center;
+  border-radius: 1rem;
+  padding: 1.2rem;
+  border: none;
+  font-size: 1.4rem;
+  background-color: lightgray;
+  color: black;
+}
+
+.sonuc {
+  position: relative;
+  margin-top: 100px;
+}
+
+.sonuc .sehir {
+  color: rgb(184, 205, 153);
+  font-size: 64px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.sonuc .detay {
+  margin-top: 60px;
+  width: 100%;
+  height: 250px;
   display: flex;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.sonuc .detay .derece {  
+  color: rgb(184, 205, 153);
+  font-size: 6rem;
+  font-weight: bold;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.sonuc .detay .statu {  
+  color: rgb(184, 205, 153);
+  font-size: 64px;
+  margin-top: 20px;
+}
+
+@media screen and (min-width :950px) {
+  .uygulama {
+    width: 60%;
+    height: 100vh;
+    margin: auto;
+    background: rgba(3, 3, 3, 0.67);
   }
 }
